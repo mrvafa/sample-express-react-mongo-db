@@ -1,0 +1,179 @@
+/* Define standard variables and values for website */
+$bgcolor: lightblue
+$textcolor: darkblue
+$fontsize: 18px
+
+/* Use the variables */
+body
+  background-color: $bgcolor
+  color: $textcolor
+  font-size: $fontsize
+*
+  box-sizing: border-box
+
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+  background-color: #f1f1f1
+  height: 100%
+  overflow: auto
+
+
+li a
+  display: block
+  color: #000
+  padding: 8px 16px
+  text-decoration: none
+
+
+li a
+  background-color: #4caf50
+  color: white
+
+
+li a:hover:not(.active)
+  background-color: #555
+  color: white
+
+
+/* Style the body */
+body
+  font-family: Arial, Helvetica, sans-serif
+  margin: 0
+
+
+/* Increase the font size of the heading */
+.header h1
+  font-size: 40px
+
+
+/* Style the navigation bar links */
+.navbar a
+  float: left
+  display: block
+  color: white
+  text-align: center
+  padding: 14px 20px
+  text-decoration: none
+
+
+/* Change color on hover */
+.navbar a:hover
+  background-color: #ddd
+  color: black
+
+
+input,
+select,
+textarea
+  width: 100%
+  padding: 12px
+  border: 1px solid #ccc
+  border-radius: 4px
+
+
+label
+  padding: 12px 12px 12px 0
+  display: inline-block
+
+
+input[type="submit"]
+  margin-top: 20px
+  background-color: #4caf50
+  color: white
+  border: none
+  border-radius: 4px
+  cursor: pointer
+  padding: 12px
+
+
+input[type="submit"]:hover
+  background-color: #45a049
+
+
+.container
+  border-radius: 5px
+  background-color: #f2f2f2
+  padding: 20px
+
+
+/* Clear floats after the columns */
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+
+/* Column container */
+.row
+  display: -ms-flexbox /* IE10 */
+  display: flex
+  -ms-flex-wrap: wrap /* IE10 */
+  flex-wrap: wrap
+
+
+/* Main column */
+.main
+  -ms-flex: 70% /* IE10 */
+  flex: 70%
+  background-color: white
+  padding: 20px
+
+
+/* Clear floats after the columns */
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px)
+  .row
+    flex-direction: column
+
+
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px)
+  .navbar a
+    float: none
+    width: 100%
+
+
+
+div.gallery img
+  width: 100%
+  height: auto
+
+
+*
+  box-sizing: border-box
+
+@mixin reset-list
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+@mixin horizontal-list
+  @include reset-list
+
+  li
+    display: inline-block
+    margin:
+      left: -2px
+      right: 2em
+
+.error
+  border: 1px #f00
+  background-color: #fdd
+
+  &--serious
+    @extend .error
+    border-width: 3px
+
+nav ul
+  @include horizontal-list
