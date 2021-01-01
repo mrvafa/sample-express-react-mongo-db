@@ -92,7 +92,7 @@ export default class App extends Component {
                                 id="email"
                                 name="email"
                                 placeholder="Your last email.."
-                                // required
+                                required
                             />
                         </div>
                     </div>
